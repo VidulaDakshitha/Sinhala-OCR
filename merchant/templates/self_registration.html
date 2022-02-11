@@ -1,0 +1,26 @@
+{% extends "mail_templated/base.tpl" %}
+
+{% load bootstrap4 %}
+
+{% block html %}
+
+
+    <div class="row">
+        <div class="col-md-12" style="text-align: center">
+            <h1>Merchant Registration</h1>
+            <h3>{{token}}</h3>
+            <h3>{{uid}}</h3>
+
+            <h3>We Warmly Welcome you to onepay Payment Gateway!</h3>
+            <h3>Please click below to complete your registration</h3>
+            <label style="color: #7bc8a1; font-size: 25px"> <a
+            href="http://{{domain}}verify?user_id={{uid}}&token={{token}}">Click Here</a></label>
+            <p>If you have not requested for this Internet Payment Gateway Registration please contact us via the following.</p>
+
+            <br/>
+
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,5 @@
+{% autoescape off %}
+Hi {{ user.phone_no }},
+Please click on the below link to confirm your email.
+http://{{ domain }}{% url 'verify-email' uidb64=uid email=email token=token %}
+{% endautoescape %}
